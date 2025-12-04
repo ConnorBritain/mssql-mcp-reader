@@ -2,7 +2,17 @@
   "name": "@connorbritain/mssql-mcp-reader",
   "version": "0.1.0",
   "description": "Read-only MCP server for Microsoft SQL Server - schema discovery, profiling, and safe querying without write operations",
-  "keywords": ["mcp", "sql-server", "mssql", "database", "ai", "claude", "windsurf", "model-context-protocol", "read-only"],
+  "keywords": [
+    "mcp",
+    "sql-server",
+    "mssql",
+    "database",
+    "ai",
+    "claude",
+    "windsurf",
+    "model-context-protocol",
+    "read-only"
+  ],
   "author": "Connor England <connor.r.england@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -34,6 +44,7 @@
   },
   "dependencies": {
     "@azure/identity": "^4.4.0",
+    "@connorbritain/mssql-mcp-reader": "^0.1.0",
     "@modelcontextprotocol/sdk": "^1.23.0",
     "dotenv": "^16.4.5",
     "mssql": "^10.0.1"
