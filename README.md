@@ -7,6 +7,18 @@
 
 Safe schema discovery, profiling, and querying with zero risk of data modification. Ideal for analysts, auditors, and anyone who needs database exploration without write access.
 
+## Architecture
+
+This package is a thin wrapper around [`@connorbritain/mssql-mcp-core`](https://github.com/ConnorBritain/mssql-mcp-core), which contains all shared logic, tools, and governance features. The wrapper selects the `"reader"` tier and delegates to the core's `startMcpServer()` function. This design enables:
+
+- **Hard separation** at the package level — regulated enterprises can guarantee that certain builds physically cannot perform destructive operations
+- **Independent versioning** — each tier can be published separately with its own release cycle
+- **Clear audit trail** — `"we only allow mssql-mcp-reader in prod"` is a compile-time guarantee
+
+The core library handles all SQL Server connections, tool dispatch, audit logging, and governance enforcement.
+
+---
+
 ## Package Tiers
 
 | Package | npm | Tools | Use Case |
