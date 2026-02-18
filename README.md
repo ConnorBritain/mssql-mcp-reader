@@ -29,6 +29,10 @@ The core library handles all SQL Server connections, tool dispatch, audit loggin
 
 ---
 
+**[Config Builder](https://connorbritain.github.io/mssql-mcp-config-builder/)** — Visual wizard to generate your `mcp_config.json` and `environments.json` files.
+
+---
+
 ## Tools Included
 
 | Category | Tools |
