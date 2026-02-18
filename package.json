@@ -1,7 +1,7 @@
 {
   "name": "@connorbritain/mssql-mcp-reader",
   "mcpName": "io.github.ConnorBritain/mssql-reader",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Read-only MCP server for Microsoft SQL Server - schema discovery, profiling, and safe querying without write operations",
   "keywords": [
     "mcp",
@@ -44,7 +44,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@connorbritain/mssql-mcp-core": "^0.1.5"
+    "@connorbritain/mssql-mcp-core": "^0.2.0"
   },
   "type": "module"
 }
