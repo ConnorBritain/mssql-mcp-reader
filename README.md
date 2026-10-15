@@ -75,6 +75,12 @@ npm install -g @connorbritain/mssql-mcp-reader@latest
 }
 ```
 
+> **Windows / Claude Desktop:** some MCP clients start the server with `C:\Windows\System32` as the working directory, where the default `logs/` audit folder can't be created and the server exits with `EPERM`. Set `AUDIT_LOG_PATH` to a writable location, for example:
+>
+> ```json
+> "AUDIT_LOG_PATH": "C:\\Users\\<user>\\mssql-mcp-reader\\logs\\audit.jsonl"
+> ```
+
 ---
 
 ## Configuration
@@ -87,7 +93,7 @@ npm install -g @connorbritain/mssql-mcp-reader@latest
 | `SQL_USERNAME` / `SQL_PASSWORD` | | Required for `sql`/`windows` modes |
 | `ENVIRONMENTS_CONFIG_PATH` | | Path to multi-environment JSON config |
 | `SCRIPTS_PATH` | | Path to named SQL scripts directory |
-| `AUDIT_LOG_PATH` | | Custom audit log path |
+| `AUDIT_LOG_PATH` | | Custom audit log path (default: `logs/audit.jsonl` in the working directory) |
 
 ---
 
